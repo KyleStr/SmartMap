@@ -1,0 +1,128 @@
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+.border-container {
+  width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header-content-pane {
+  overflow: hidden;
+  color: #999;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 60px;
+  width: 100%;
+  display: inline-block;
+}
+
+.logo {
+  position: relative;
+  float: left;
+  padding-right: 10px;
+  margin-left: 20px;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.links li {
+  display: none;
+  padding-left:10px;
+}
+
+.user-info span {
+  padding-left:15px;
+}
+
+.app-header {
+  font-size: 50px;
+}
+
+.header-left {
+  padding-left:15px;
+  line-height: 65px;
+}
+
+.header-right {
+  float:right;
+  text-align: right;
+  padding: 10px 25px 0 0;
+  line-height: 37.5px;
+}
+
+.header-right a {
+  color: $mainBlue;
+}
+
+.header-right a:hover {
+  color: $darkerBlue;
+}
+
+.tagline {
+  font-size: 28px;
+  padding-left:25px;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+    height: 100%;
+    float: left;
+  background: #fff;
+}
+
+.footer {
+  width: 100%;
+    height: 100%;
+}
+
+.footer-content-pane {
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+
+  color:#eee;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 2em;
+}
+
+.analytics-form {
+  height: 100%;
+}
+
+.shadow {
+  -webkit-box-shadow: 2px 2px 4px #323834;
+  -moz-box-shadow: 2px 2px 4px #323834;
+  -o-box-shadow: 2px 2px 4px #323834;
+  box-shadow: 2px 2px 4px #323834;
+}
+
+#blockingDiv {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    cursor: wait;
+}
+

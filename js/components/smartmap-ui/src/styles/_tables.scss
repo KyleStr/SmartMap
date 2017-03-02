@@ -1,0 +1,81 @@
+// TABLES
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-family: $base-font-family;
+
+  td, th {
+    padding: 0;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  > thead > tr > th {
+    vertical-align: bottom !important;
+    border-bottom: 2px solid tint($base-color, 90%);
+    font-weight: $base-font-bold;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: tint($base-color, 20%);
+
+    a {
+      display: inline-block;
+      color: tint($base-color, 20%);
+      &.sort:after {
+        font-size: 1rem;
+        color: tint($base-color, 20%);
+        margin-left: 0.25rem;
+      }
+      &.sort-none:after {
+        @extend .icon-sort;
+      }
+      &.sort-asc:after {
+        @extend .icon-sort-asc;
+        
+      }
+      &.sort-desc:after {
+        @extend .icon-sort-desc;
+      }
+    }
+  }
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    padding: 0.5rem;
+    vertical-align: top;
+    border-top: 1px solid tint($base-color, 90%);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  > caption+thead > tr:first-child > th,
+  > colgroup+thead > tr:first-child > th,
+  > thead:first-child > tr:first-child > th,
+  > caption+thead > tr:first-child > td,
+  > colgroup+thead > tr:first-child > td,
+  > thead:first-child > tr:first-child > td {
+    border-top: 0;
+  }
+
+  tr.disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      @include opacity(0.3);
+  }
+  
+  .cell-region {
+    font-weight: $base-font-bold;
+  }
+
+}

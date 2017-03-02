@@ -1,0 +1,24 @@
+<% if (indicatorName) { %>
+  <div class="smpanel-indicator <%= category %>">
+
+    <h3 class="smpanel-indicator-title" title="<%= indicatorName %>"><%= indicatorName %></h3>
+    <a class="dataSource" href="<%= indicator.get('PROVIDER_URL') %>" target="_blank">
+      <span ><%= indicator.get('SRC1') %></span>
+    </a>
+    <ul class="smpanel-indicator-options">
+      <li><a href="#" title="More information about indicator" class="indicator-info"><span>Info</a></span></li>
+      <li><a href="#" title="Remove indicator" class="indicator-remove"><span>Remove</span></a></li>
+    </ul>
+
+    <div class="form-control input">
+      <input type="text" name="indicator_min" class="form-input form-input-s indicator-min" />
+    </div>
+    <div class="form-control range">
+      <div class="indicator-slider" data-unit="<%= indicatorUnit %>"><!-- Slider --></div>
+    </div>
+    <div class="form-control input">
+      <input type="text" name="indicator_max" class="form-input form-input-s indicator-max" />
+    </div>
+
+  </div>
+<% } %>

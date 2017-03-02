@@ -1,0 +1,91 @@
+<div id="ind-lib">
+  <div class="modal-toolbar2">
+    <div class="smpanel-prose">
+      <h1>Indicator Library</h1>
+      <p>Select the country and category for which you want to see the indicators.</p>
+    </div>
+    <div class="form-control form-control-inline form-control-select">
+      <select id="countrySelect" data-placeholder="Country">
+        <option></option>
+        <% _(countries).each(function(country) { %>
+          <option value="<%= country.CNTRY_ISO %>" <% if (country.CNTRY_ISO == selectedCountry ) { %> selected <% } %>> <%= country.CNTRY_NM %> </option>
+        <% }); %>
+      </select>
+    </div>
+
+    <!-- <div id="categorySelectGroup" class="form-control form-control-inline">
+      <div class="bttn-group bttn-group-m">
+        <% var dis='disabled'; if (selectedCat) { var dis=''; } %>
+         <button class="bttn bttn-default category-select hide-txt demo <% if (selectedCat == 'DEMO' ) { %> active <% } %>" data-category="DEMO" <%= dis %>><span>cat 1</span></button>
+         <button class="bttn bttn-default category-select hide-txt soce <% if (selectedCat == 'SOCE' ) { %> active <% } %>" data-category="SOCE" <%= dis %>><span>cat 2</span></button>
+         <button class="bttn bttn-default category-select hide-txt envm <% if (selectedCat == 'ENVM' ) { %> active <% } %>" data-category="ENVM" <%= dis %>><span>cat 3</span></button>
+      </div>
+    </div> -->
+
+    <div id="categorySelectGroup2" class="form-control form-control-inline form-control-select">
+      <select id="categorySelect2" data-placeholder="Type of indicator">
+        <option></option>
+         <option data-category="DEMO" class="DEMO icon" value="DEMO" >Demographics </option>
+         <option data-category="ENVM" class="ENVM icon" value="ENVM" >Environment management </option>
+         <option data-category="SOCE" class="SOCE icon" value="SOCE" >Socioeconomic </option>
+      </select>
+    </div>
+
+
+    <div class="back">
+      <a href="" id="backToMap">Back to Map</a>
+    </div>
+
+  </div>
+
+  <div class="content"  data-scrollable>
+
+    <% if (_.isEmpty(indicatorGroupped)) { %>
+      <!-- <h2>Indicator library</h2>
+      <p>Select the country and category for which you want to see the indicators.</p> -->
+    <% } else { %>
+
+      <section class="ind-cat">
+        <h1 class="ind-cat-title"><%= selectedCatName %></h1>
+
+        <% _.each(indicatorGroupped, function(indicatorsList, catName) { %>
+          <section class="ind-type">
+            <h1 class="ind-type-title"><%= catName %></h1>
+            <ul class="ind-list">
+
+            <% _.each(indicatorsList, function(indicator) { %>
+              <li class="ind-wrapper">
+                <article id="ind-1" class="ind-item">
+                  <h1 id="<%= indicator.get('FIELD_NM') %>" class="ind-item-title"><%= indicator.get("DESC_SHORT") %></h1>
+                  <dl class="ind-details dl-horizontal">
+                    <dt>Description</dt>
+                    <dd>
+                      <p><%= indicator.get("DESC_LONG") %></p>
+                    </dd>
+                    <dt>Data Source</dt>
+                    <dd><%= indicator.get("SRC1") %></dd>
+                    <% if($.trim(indicator.get('LOGO_URL'))) { %>
+                      <dt>Provider</dt>
+                      <dd>
+                        <a href="<%= indicator.get('PROVIDER_URL') %>" target="_blank" title="Visit provider website" class="provider-link">
+                          <strong><%= indicator.get("SRC1") %></strong>
+                          <img src="<%= indicator.get('LOGO_URL') %>" alt="Provider logo" class="provider-logo" />
+                        </a>
+                      </dd>
+                    <% } %>
+                  </dl>
+                </article>
+              </li>
+            <% }); %>
+
+            </ul>
+          </section>
+        <% }); %>
+
+      </section>
+
+    <% } %>
+  </div>
+
+
+</div>

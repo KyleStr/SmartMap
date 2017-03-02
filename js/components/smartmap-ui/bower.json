@@ -1,0 +1,16 @@
+{
+  "name": "smartmap-ui",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
+    "bootstrap-sass-twbs": "~3.2.0",
+    "fontawesome": "~4.2.0",
+    "d3": "~3.4.11",
+    "chosen": "~1.4.2",
+    "chosen-dist": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
+    "nouislider": "~7.0.9",
+    "jquery-once": "~1.2.6",
+    "perfect-scrollbar": "~0.5.8"
+  }
+}

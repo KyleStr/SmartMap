@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40.6 40.6" style="enable-background:new 0 0 40.6 40.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#D0CFD4;}
+	
+		.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#969696;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#C9C9C9;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{fill:#FFFFFF;stroke:#C9C9C9;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#ECECEC;stroke:#C9C9C9;stroke-linecap:round;stroke-linejoin:round;}
+	.st5{fill:#ECECEC;stroke:#C9C9C9;stroke-linecap:round;stroke-linejoin:round;}
+	.st6{opacity:0.81;}
+	.st7{fill:#7C7C7C;}
+	.st8{fill:#E24729;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#6CC04A;}
+	.st10{fill:#F3BF55;}
+	.st11{fill:#449AA0;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#5D5D5D;}
+	.st13{fill:#37AF49;}
+	.st14{fill:#C01D1B;}
+	.st15{fill:#9F784B;}
+	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#F2F2F2;}
+	.st17{fill:#6CC04A;}
+	.st18{fill:#5D5D5D;}
+	.st19{fill:#EFEFEF;}
+	.st20{fill:#FFFFFF;}
+	.st21{fill:#FFFFFF;stroke:#C9C9C9;}
+	.st22{fill:none;stroke:#C9C9C9;}
+	.st23{opacity:0.78;fill-rule:evenodd;clip-rule:evenodd;fill:#CDCCD1;}
+	.st24{fill:#6BBF6A;}
+	.st25{fill:#FFFFFF;stroke:#B0B0B0;stroke-width:5;}
+	.st26{fill:#B0B0B0;}
+	.st27{fill:none;stroke:#B0B0B0;}
+	.st28{fill:#E3E3E3;}
+	.st29{fill:none;stroke:#C9C9C9;stroke-width:2;}
+	.st30{fill:#6CC04A;stroke:#6CC04A;stroke-miterlimit:10;}
+	.st31{fill:#6CC04A;stroke:#6CC04A;}
+	.st32{fill:#CDCCD1;}
+</style>
+<g id="water">
+</g>
+<g id="map">
+</g>
+<g id="country">
+</g>
+<g id="states">
+</g>
+<g id="labels">
+</g>
+<g id="reasults">
+</g>
+<g id="indicator_library">
+</g>
+<g id="header_1_">
+	<g>
+		<g>
+			<path class="st17" d="M0,20.3C0,9.1,9.1,0,20.3,0c11.2,0,20.3,9.1,20.3,20.3c0,11.2-9.1,20.3-20.3,20.3C9.1,40.6,0,31.5,0,20.3z"
+				/>
+			<g>
+				<g>
+					<g>
+						<g>
+							<g>
+								<path class="st20" d="M20.2,9.1c-5.8,0-6.7,5.6-6.7,6.7c0,2.4,0.8,3.8,0.8,3.8l5.8,11.9c0,0,5-10.4,5.9-11.9
+									c0.9-1.5,1.1-3.1,1.1-4C27.1,14.2,26,9.1,20.2,9.1"/>
+							</g>
+						</g>
+						<path class="st24" d="M16.7,16c0,2,1.6,3.6,3.6,3.6c2,0,3.6-1.6,3.6-3.6c0-2-1.6-3.6-3.6-3.6C18.3,12.4,16.7,14,16.7,16"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="info_1_">
+</g>
+<g id="map_zoom">
+</g>
+<g id="Isolation_Mode">
+</g>
+</svg>

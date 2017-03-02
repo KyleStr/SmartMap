@@ -1,0 +1,50 @@
+<style media="screen">
+.respanel-header{
+  text-align: center;
+}
+.respanel-header .respanel-title{
+  color: white;
+}
+
+</style>
+<a class="drawer-toggle" href="#" title="Collapse">
+  <span>Collapse</span>
+</a>
+<header class="respanel-header">
+  <h1 class="respanel-title">Results</h1>
+</header>
+<div class="respanel-body" data-scrollable>
+  <div class="respanel-wrapper">
+
+    <% if (this.indicatorCollection) { %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><a href="#" title="Sort by region" class="sort sort-none" data-sort-field="NAME_<%= this.adminLevel %>"><%= this.adminLabel %></a></th>
+            <% this.indicatorCollection.each(function(indicator) { %>
+              <th><a href="#" title="Sort by region" class="sort sort-none" data-sort-field="<%= indicator.get('FIELD_NM') %>"><%= indicator.get('DESC_SHORT') %></a></th>
+            <% }) %>
+            </tr>
+        </thead>
+        <tbody>
+          <% var self = this; _.each(this.resultsFeatures, function(feat) { %>
+            <tr>
+              <td class="cell-region" data-codgov="<%= feat.attributes.CODGOV %>">
+                <a href="#" title="Go to region">
+                  <%= feat.attributes['NAME_' + self.adminLevel] %>
+                </a>
+              </td>
+              <% self.indicatorCollection.each(function(indicator) { %>
+                <td><%= feat.attributes[indicator.get('FIELD_NM')] %>
+              <% }) %>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+    <% } else { %>
+      <p class="empty">Nothing to show</p>
+    <% } %>
+
+  </div>
+</div>

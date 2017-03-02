@@ -1,0 +1,26 @@
+<div class="smpanel-prose">
+  <h1>Indicators</h1>
+  <p>Where is your solution most needed? Find your target beneficiaries comparing our indicators.</p>
+</div>
+
+<div class="indicatorSelectGroup" >
+
+  <div id="categorySelectGroup" class="form-control form-control-block">
+    <select id="categorySelect" data-placeholder="Category">
+      <option value=""></option>
+      <% _(categories).each(function(category) { %>
+       <option class="<%= category.CATEGORY_ID %> category-icon" data-category="<%= category.CATEGORY_ID %>" value="<%= category.CATEGORY_ID %>"><%= category.CATEGORY_NAME %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <div id="subtypeSelectGroup" class="form-control form-control-block">
+    <select id="subtypeSelect" data-placeholder="Type" disabled><!-- options --></select>
+  </div>
+
+  <div id="indicatorSelectGroup" class="form-control form-control-block">
+    <select id="indicatorSelect" data-placeholder="Indicator" disabled><!-- options --></select>
+  </div>
+
+  <button type="button" name="selectionFinished" id="selectionIndicatorFinished" disabled>Submit</button>
+</div>

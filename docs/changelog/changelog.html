@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: #eee;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+ol li {
+    padding:15px 0;
+}
+
+ul li {
+    padding:0;
+}
+
+em {
+    color: dodgerblue;
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Updates to *Analytics* since 27 June release:
+---
+
+1. Major update to the Filter/Histogram tool</title>
+
+</head>
+<body>
+<h2>Updates to <em>Analytics</em> since 27 June release:</h2>
+
+<ol>
+<li><p>Major update to the Filter/Histogram tool.</p>
+
+<ul>
+<li>Quick explanation of how to use the tool.</li>
+<li>Fixed formatting for x-axis labels.</li>
+<li>Input boxes allow you full control over the range you want to select.</li>
+<li>Displays count of regions in current selection.</li>
+<li>Toggle button added to switch between raw and normalized distribution.</li>
+<li>Added validation to min and max values.</li>
+</ul>
+</li>
+<li><p>Analytics now notifies you of how many regions have been selected by all your filters.</p></li>
+<li><p>Analytics can now normalize data for filtering. When viewing the histogram, simple click '#' or '%' to toggle between the raw or normalized view. <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p></li>
+<li><p>Added actual data values to the map popups. Now when you click a region on the map, you can see the values for the indicators you have selected.</p></li>
+<li><p>The 'Results' table now only displays when it is needed, and does not open unless the user chooses to do so. The table now also displays data values just as you filtered them (whether raw or normalized).</p></li>
+<li><p>Layers and Webmaps have been moved to a widget similar to the basemap selector.</p>
+
+<ul>
+<li>The entire left panel has been dedicated to Analytics.</li>
+<li>Layers and Webmaps have been styled to match the rest of the application.</li>
+</ul>
+</li>
+<li><p>Added help content for each step in Analytics as well as Layers and Webmaps.</p></li>
+<li><p>Each indicator now has an 'Info' button which shows a detailed description of that indicator. <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p></li>
+<li><p>Styled the app so that it can be quickly and easily integrated with NEXSO platform.</p></li>
+<li><p>'Start Over' option now resets all selected indicators and clears the map and results.</p></li>
+<li><p>Changed 'Step 2' label per MIF request.</p></li>
+<li><p>Fixed layer ordering issue where Projects displayed under the rest of the layers. Also changed the graphic used for project locations.</p></li>
+<li><p>You can now click anywhere in the title area of the Results table to expand/collapse it.</p></li>
+<li><p>Modified icons used in Analytics to be more intuitive.</p></li>
+<li><p>Other general UI cleanup.</p></li>
+</ol>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Only valid for data that supports this action<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Content is pending database update<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</body>
+</html>

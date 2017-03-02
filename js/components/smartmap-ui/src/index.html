@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>smartmap-ui-sample</title>
+
+        <!-- Dojo/Esri Theme -->
+        <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+        <link rel="Stylesheet" href="//js.arcgis.com/3.10/js/dojo/dijit/themes/soria/soria.css"/>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+        <!-- 3rd Party Libraries -->
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone.js"></script>
+        <script src="lib/bootstrap.js"></script>
+        <script src="lib/chosen.jquery.js"></script>
+        <script src="lib/d3.js"></script>
+        <script src="lib/smartmap.js"></script>
+
+        <style type="text/css">
+          #map {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+          }
+
+          #smartmap {
+            position: absolute;
+            z-index: 2;
+            width: 400px;
+            right: 20px;
+            top: 20px;
+            bottom: 20px;
+
+            background-color: white;
+            border: 2px solid gray;
+          }
+        </style>
+
+    </head>
+
+    <body class="soria">
+      <div id="smartmap"></div>
+      <div id="map"></div>
+        <script>
+
+          function getAppPath() {
+            var pathRegex = new RegExp(/\/[^\/]+$/);
+            return window.location.pathname.replace(pathRegex, '');
+          }
+
+          var dojoConfig = {
+              isDebug: false,
+              async: true,
+              packages: [
+                  { name: 'app', location: getAppPath() + './' },
+                  { name: 'lib', location: getAppPath() + 'lib' }
+              ]
+          };
+
+        </script>
+        <script src="//js.arcgis.com/3.11"></script>
+        <script>
+            require(['esri/arcgis/utils', 'app/smartmap-ui'], function(arcgisUtils, SmartmapUI){
+              (function() {
+
+
+                var deferred = arcgisUtils.createMap('e622c425cdab41eaaa3fbc3203862b50', 'map');
+
+                deferred.then(function(response) {
+                  map = response.map;
+
+                  // Configure smartmap api
+                  Smartmap.configure({
+                    'helper': 'jquery',
+                    'serviceUrl': 'http://nexso.esri.com/arcgis/rest/services/NEXSO_new_gen3/MapServer/'
+                  });
+
+
+                  var analytics = new SmartmapUI({
+                    map: map,
+                    el: '#smartmap'
+                  });
+
+                  // Smartmap.getSchema().then(function(response) {
+                  //   var analytics = new SmartmapUI({
+                  //     map: map,
+                  //     el: '#smartmap'
+                  //   });
+                  // }, function(error) {
+                  //   console.error(error);
+                  // });
+                }, function(error) {
+                  console.error(error);
+                })
+              })();
+            });
+        </script>
+    </body>
+</html>

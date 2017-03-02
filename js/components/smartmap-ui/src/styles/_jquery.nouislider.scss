@@ -1,0 +1,270 @@
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+  @include user-select(none);
+}
+.noUi-target {
+  position: relative;
+}
+.noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+.noUi-stacking .noUi-handle {
+/* This class is applied to the lower origin when
+   its values is > 50%. */
+  z-index: 10;
+}
+.noUi-stacking + .noUi-origin {
+/* Fix stacking order in IE7, which incorrectly
+   creates a new context for the origins. */
+  *z-index: -1;
+}
+.noUi-state-tap .noUi-origin {
+-webkit-transition: left 0.3s, top 0.3s;
+  transition: left 0.3s, top 0.3s;
+}
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.noUi-base {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/* Slider size;
+ */
+.noUi-horizontal {
+  height: 1rem;
+}
+.noUi-vertical {
+  width: 1rem;
+}
+
+/* Styling;
+ */
+.noUi-background {
+  background: tint($base-color, 88%);
+  box-shadow: inset 0 4px 0 0 rgba($base-color, 0.08),
+              inset 0 0 0 1px rgba($base-color, 0.16),
+              0 1px 0 0 rgba(#FFF, 0.32);
+}
+.noUi-connect {
+  background: $primary-color;
+  box-shadow: inset 0 4px 0 0 rgba($base-color, 0.08),
+              inset 0 0 0 1px rgba($base-color, 0.16);
+}
+.noUi-origin {
+  border-radius: $global-radius;
+}
+.noUi-target {
+  border-radius: $global-radius;
+  background: tint($base-color, 88%);
+  box-shadow: inset 0 4px 0 0 rgba($base-color, 0.08),
+              inset 0 0 0 1px rgba($base-color, 0.16),
+              0 1px 0 0 rgba(#FFF, 0.32);
+}
+.noUi-target.noUi-connect {
+  box-shadow: inset 0 0 3px rgba(51,51,51,0.45), 0 3px 6px -5px #BBB;
+}
+
+/* Handles and cursors;
+ */
+.noUi-dragable {
+  cursor: w-resize;
+}
+.noUi-vertical .noUi-dragable {
+  cursor: n-resize;
+}
+.noUi-handle {
+  background: tint($base-color, 96%);
+  border-radius: $global-radius/2;
+  box-shadow: inset 0 -4px 0 0 rgba($base-color, 0.16), inset 0 0 0 1px rgba($base-color, 0.16), 2px 4px 0 0 rgba($base-color, 0.08);
+  @include transition(all 0.2s ease-in 0s);
+  &:hover {
+    background: tint($base-color, 88%);
+  }
+  .noUi-horizontal & {
+    width: 1rem;
+    height: 1.5rem;
+    left: -0.5rem;
+    top: -0.25rem;
+    cursor: w-resize;
+  }
+  .noUi-vertical & {
+    width: 28px;
+    height: 34px;
+    left: -6px;
+    top: -17px;
+  }
+}
+.noUi-active,
+.noUi-active:hover {
+  background: tint($base-color, 80%);
+  box-shadow: inset 0 -4px 0 0 rgba($base-color, 0.16), inset 0 0 0 1px rgba($base-color, 0.16), 1px 2px 0 0 rgba($base-color, 0.08);
+}
+
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 12px;
+  width: 1px;
+  background: rgba($base-color, 0.12);
+  top: 50%;
+  margin-top: -6px;
+}
+.noUi-handle:before {
+  left: 0.35rem;
+}
+.noUi-handle:after {
+  right: 0.35rem;
+}
+
+/* Disabled state;
+ */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+  cursor: not-allowed;
+}
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+  @include opacity(0.6);
+}
+
+
+/*******************************************************/
+/*******************************************************/
+/**** noUiSlider Pips
+
+/* Base;
+ *
+ */
+
+.noUi-pips {
+	position: absolute;
+	font-size: 0.775rem;
+}
+
+/* Values;
+ *
+ */
+.noUi-value {
+  width: 3rem;
+  position: absolute;
+  text-align: center;
+  opacity: 0.6;
+  line-height: 0.75rem;
+}
+.noUi-value-sub {
+}
+
+/* Markings;
+ *
+ */
+.noUi-marker {
+	position: absolute;
+	background: rgba($base-color, 0.12);
+}
+.noUi-marker-sub {
+}
+.noUi-marker-large {
+}
+
+/* Horizontal layout;
+ *
+ */
+.noUi-pips-horizontal {
+  margin-top: 0.25rem;
+	top: 100%;
+	left: 0;
+	width: 100%;
+}
+.noUi-value-horizontal {
+  padding-top: 0.5rem;
+  margin-left: -1.5rem;
+}
+.noUi-value-horizontal.noUi-value-sub {
+	padding-top: 15px;
+}
+
+.noUi-marker-horizontal.noUi-marker {
+	width: 1px;
+	height: 0.25rem;
+}
+.noUi-marker-horizontal.noUi-marker-sub {
+}
+.noUi-marker-horizontal.noUi-marker-large {
+}
+
+/* Vertical layout;
+ *
+ */
+// .noUi-pips-vertical {
+// 	padding: 0 10px;
+// 	height: 100%;
+// 	top: 0;
+// 	left: 100%;
+// }
+// .noUi-value-vertical {
+// 	width: 15px;
+// 	margin-left: 20px;
+// 	margin-top: -5px;
+// }
+
+// .noUi-marker-vertical.noUi-marker {
+// 	width: 5px;
+// 	height: 2px;
+// 	margin-top: -1px;
+// }
+// .noUi-marker-vertical.noUi-marker-sub {
+// 	width: 10px;
+// }
+// .noUi-marker-vertical.noUi-marker-large {
+// 	width: 15px;
+// }
+
+
+// UNIT LABEL
+
+[data-unit] {
+  position: relative;
+  z-index: 1;
+  &:after {
+    @include user-select(none);
+    content: attr(data-unit);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 0.75rem;
+    top: 100%;
+    z-index: 2;
+    font-size: 0.775rem;
+    text-align: center;
+    opacity: 0.6;
+    line-height: 0.75rem;
+  }
+}

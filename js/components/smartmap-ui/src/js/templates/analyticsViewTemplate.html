@@ -1,0 +1,40 @@
+<span id="panelToogle" class="icon" state="opened"></span>
+<header class="smpanel-header">
+  <h1 class="smpanel-title">Selection</h1>
+  <div class="buttonGroupe">
+    <button title="Reset selection" class="bttn bttn-default refresh hide-txt disabled" id="smreset">
+      <span>Reset</span>
+    </button>
+    <button title="Download selection" class="bttn bttn-default download hide-txt disabled" id="smdownload">
+      <span>Download</span>
+    </button>
+    <% if (showBtns.report) {%>
+      <button title="View report" class="bttn bttn-default print hide-txt disabled" id="smreport">
+        <span>Report</span>
+      </button>
+      <% } %>
+  </div>
+</header>
+<div class="smpanel-body" style="height: calc(100vh - 146px);">
+
+  <div id="country-select">
+    <!-- CountrySelectView -->
+  </div>
+  <div id="indicator-select">
+    <!-- IndicatorGroupView -->
+  </div>
+
+</div>
+<footer class="smpanel-footer">
+
+
+  <!-- <button title="Share selection" class="bttn bttn-default share hide-txt disabled" id="smshare"><span>Share</span></button> -->
+
+  <button title="Add indicator" class="icon add button disabled" id="smindicator-add">
+    <span>Add indicator</span>
+  </button>
+  <button title="Add indicator" style="display:none" class="" id="smindicator-cancel">
+    <span>Cancel</span>
+  </button>
+
+</footer>

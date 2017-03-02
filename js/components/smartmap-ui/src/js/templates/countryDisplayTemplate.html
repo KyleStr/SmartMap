@@ -1,0 +1,27 @@
+
+<% if (countryName) { %>
+  <style media="screen">
+  #country-select{
+    background-color: #efefef;
+  }
+  </style>
+  <h2 class="smpanel-country-title">
+    <%= countryName %>
+  </h2>
+  <p class="smpanel-country-subtitle">
+    <%= adminLevelName %>
+      <span class="badge">0</span>
+  </p>
+  <ul class="smpanel-country-options">
+    <li class="dropdown">
+      <a href="#" title="Edit country" class="edit" id="smcountry-edit">
+        <span class="visually-hidden">Edit country</span>
+      </a>
+    </li>
+  </ul>
+
+  <div id="indicatorSelectView"></div>
+
+  <% } else { %>
+    <div id="selectCountryView"></div>
+    <% } %>

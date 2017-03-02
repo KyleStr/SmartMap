@@ -1,0 +1,516 @@
+// STYLES
+// Contains the global styles of the Smartmap
+
+// MISC
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-style: $base-font-style;
+  min-width: 768px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.loading {
+  @include transform(translateZ(0));
+  @extend .antialiased;
+  // position: absolute;
+  z-index: 9997; // below the indicator select modal
+  // top: 50%;
+  // left: 50%;
+  // width: 8rem;
+  // height: 8rem;
+  // margin: -4rem 0 0 -4rem;
+  background: rgba($base-color, 0.8);
+  padding: 2rem 1rem;
+  border-radius: $global-radius;
+  color: #fff;
+  text-align: center;
+  // new
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  line-height: 100vh;
+
+  opacity: 0;
+  visibility: hidden;
+  @include transform(scale(0));
+
+  @include transition(all 0.2s ease 0);
+
+  &.revealed {
+    opacity: 1;
+    visibility: visible;
+    @include transform(scale(1));
+  }
+
+  &:before {
+    display: block;
+    @extend .icon-spinner;
+    font-size: 2rem;
+    position: absolute;
+    top: 48%;
+    left: 49%;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1;
+    margin: 0 auto 0.5rem auto;
+    @include animation(spin-c 1s linear 0s infinite);
+  }
+}
+
+// Links
+
+a {
+  cursor: pointer;
+  color: $primary-color;
+  text-decoration: none;
+  @include transform(translateZ(0));
+  @include transition-property(opacity);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease);
+  @include transition-delay(0);
+  &[rel~="external"]:after {
+    @extend .icon-s-new-window;
+    font-size: 1rem;
+    @include opacity(0.4);
+    margin-left: 0.25rem;
+  }
+}
+
+a:visited {
+  color: $primary-color;
+}
+
+a:hover {
+  @include opacity(0.6);
+  outline: none;
+}
+
+a:active{
+  outline: none;
+  @include transform(translate(0, 1px));
+}
+
+
+// MODALS
+
+// Welcome
+
+#welcome {
+  .modal-prose {
+    text-align: left;
+  }
+  .logo {
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+    height: 6rem;
+    width: auto;
+  }
+  .version {
+    text-align: right;
+  }
+}
+
+// Indicators library
+
+.back{
+  float: left;
+}
+
+.back a{
+
+}
+
+#ind-lib{
+   width: 100vw;
+   height: calc(100vh - 89px);
+   padding: 5em 3em;
+   z-index: 100;
+   position: absolute;
+   top: 89px;
+   background-color: #EFEFEF;
+}
+
+
+#ind-lib .modal-toolbar2 {
+  display: inline-block;
+  float: left;
+  width: 290px;
+}
+
+#ind-lib .modal-toolbar2 .smpanel-prose h1{
+  font-size: 27px;
+  color: #000000;
+}
+
+#ind-lib .modal-toolbar2 .smpanel-prose p{
+  font-size: 14px;
+  color: #000000;
+}
+
+#ind-lib .content {
+  background-color: white;
+  height: 77vh;
+  width: 55vw;
+  overflow-y: auto;
+  padding: 2em;
+  margin: 0 4em;
+  float: left;
+}
+#ind-lib .content .ind-type-title{
+  color:#6cc04a;
+}
+
+.ind-cat-title {
+  @extend .visually-hidden;
+}
+.ind-type:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.ind-type-title {
+  @extend .hd-xxxs;
+  border-bottom: 1px solid tint($base-color, 86%);
+  padding-bottom: 0.5rem;
+  color: inherit;
+  margin-bottom: 2rem;
+}
+.ind-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .ind-wrapper {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.ind-item-title {
+  @extend .hd-xxs;
+}
+.provider-link,
+.provider-link:visited {
+  color: inherit;
+  display: block;
+}
+.provider-logo {
+  display: block;
+  padding: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0 0 1px $border-shadow-rgba;
+  border-radius: $global-radius;
+  height: auto;
+  max-width: 12rem;
+  margin-top: 1rem;
+}
+
+// UI
+
+#smartmap-ui {
+  width: 20rem;
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+
+  @media #{$medium-up} {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.smpanel {
+  @extend %base-box-skin;
+  padding: 1rem;
+
+  .smpanel-header {
+    padding: 1rem 2rem 1rem 1rem;
+    margin: -1rem -1rem 0 -1rem;
+    border-bottom: 1px solid tint($base-color, 88%);
+  }
+
+  .smpanel-title {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: $base-font-bold;
+    margin-bottom: 0;
+  }
+
+  .smpanel-country-title {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: $base-font-bold;
+    margin-bottom: 1rem;
+    padding-right: 3rem;
+  }
+
+  .smpanel-country-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    margin-top: -1rem;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+
+  .smpanel-indicator-title {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    font-weight: $base-font-bold;
+    margin-bottom: 1rem;
+  }
+
+  .smpanel-prose {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .smpanel-body {
+    margin: 0 -1rem;
+    background: tint($base-color, 96%);
+    min-height: 16rem;
+  }
+
+  .smpanel-wrapper {
+    padding: 1rem;
+  }
+
+  .smpanel-footer {
+    height: 57px;
+    padding: 10px;
+    margin: 0 -1rem -1rem -1rem;
+    border-top: 1px solid tint($base-color, 88%);
+    word-spacing: -0.26rem;
+    @extend .clearfix;
+
+    .bttn {
+      margin: 0 0.5rem 0 0;
+      float: left;
+    }
+
+    #smindicator-add {
+      margin-right: 0;
+      float: right;
+    }
+
+  }
+}
+
+// Indicator select categories
+.group-supersized {
+  width: 100%;
+  .bttn {
+    width: 33.333%;
+    &:before {
+      font-size: 2rem;
+    }
+  }
+}
+
+#country-select {
+  position: relative;
+  padding: 1rem;
+  border-bottom: 1px solid rgba($base-color, 0.12);
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  &.empty {
+    text-align: center;
+    border-bottom: 0;
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+    }
+    .smpanel-country-title {
+      padding-right: 0;
+    }
+  }
+  .smpanel-country-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    z-index: 100;
+    .edit {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      line-height: 2rem;
+      color: $base-color;
+      &:after {
+        @extend .icon-pencil;
+        font-size: 1rem;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#indicator-select {
+  max-height: 16rem;
+}
+
+.indicator-list {
+  max-height: 16rem;
+  .smpanel-prose {
+    padding: 1rem;
+  }
+}
+
+.smpanel-indicator {
+  position: relative;
+  @extend .clearfix;
+  padding: 1rem 1rem 2rem 1rem;
+  border-bottom: 1px solid rgba($base-color, 0.12);
+  margin-bottom: 0;
+
+  // @include animation(reveal-right 0.5s ease 0s 1);
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      z-index: 11 - $i;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    float: left;
+    &.input {
+      width: 3rem;
+    }
+    &.range {
+      width: 10rem;
+      margin: 0 1rem;
+    }
+  }
+  .smpanel-indicator-title {
+    padding: 0 3.5rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+    @extend .truncated;
+  }
+  .dataSource{
+    display: block;
+    font-size: 11px;
+    color: black;
+    margin-left: 2em;
+    margin-top: -1em;
+    margin-bottom: 2em;
+  }
+  .smpanel-indicator-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 100;
+    li {
+      opacity: 1;
+      float: left;
+      margin: 0;
+    }
+    a, a:visited {
+      display: block;
+      width: 1.5rem;
+      height: 2rem;
+      text-align: center;
+      line-height: 2rem;
+      color: $base-color;
+      > * {
+        @extend .visually-hidden;
+      }
+      &:before {
+        font-size: 1rem;
+      }
+      &.indicator-remove:before { @extend .icon-cancel; }
+      &.indicator-info:before { @extend .icon-circle-info; }
+    }
+    .dropdown-menu-right {
+      &:before {
+        right: 0.5rem;
+      }
+    }
+    .dropdown-toggle {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      line-height: 2rem;
+      color: $base-color;
+      opacity: 0.28;
+      &.settings {
+        &:after {
+          @extend .icon-cog;
+          font-size: 1rem;
+        }
+      }
+    }
+    .open > .dropdown-menu {
+      opacity: 1;
+      margin-top: 0.25rem;
+    }
+    .open > .dropdown-toggle {
+      color: $primary-color;
+      opacity: 1;
+    }
+  }
+}
+
+
+/* Keyframes animations */
+
+@include keyframes(bounce-x) {
+  0% { @include transform(translateX(0)); }
+  25% { @include transform(translateX(0.5rem)); }
+  50% { @include transform(translateX(-0.5rem)); }
+  75% { @include transform(translateX(0.25rem)); }
+  100% { @include transform(translateX(0)); }
+}
+
+@include keyframes(reveal-right) {
+  from { left: 100%; }
+    to { left: 0; }
+}
+
+@include keyframes(spin-c) {
+  from { @include transform(rotate(0deg)); }
+    to { @include transform(rotate(360deg)); }
+}
+
+@include keyframes(spin-c) {
+  from { @include transform(rotate(0deg)); }
+    to { @include transform(rotate(360deg)); }
+}
+
+@include keyframes(spin-cc) {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(-360deg)); }
+}

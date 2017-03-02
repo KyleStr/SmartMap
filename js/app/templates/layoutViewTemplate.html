@@ -1,0 +1,63 @@
+<header id="site-header">
+  <nav id="site-prime-nav" style="position: relative;
+                                  z-index: 110;
+                                  height: 89px;
+                                  width: 100vw;
+                                  background-color: #CDCCD1;
+                                  left:0;
+                                  top:0;
+                                  padding:1em;
+                                  border-bottom: solid 2px #B0B0B0;">
+    <h1 id="site-title">
+      <img src="assets/images/sm-logo-icn.svg" alt="SmartMap logo" width="128" height="150" style=" width: auto;
+                                                                                                    height: 100%;
+                                                                                                    margin-right: 0.7rem;
+                                                                                                    float: left;
+                                                                                                    margin-top: 0;" />
+
+      <span>Smart Map</span>
+      <small>nexso tools</small>
+    </h1>
+    <ul class="headerMenu" role="menu" style="display:inline-block;
+                            float: right;
+                            list-style-type: none;
+                            margin-right: 500px;">
+      <li><a href="#" title="Map" id="show-map">Map</a></li>
+      <li><a href="#" title="About" id="show-about">About</a></li>
+      <li><a href="#" title="Indicators" id="show-indicator-lib">Indicators</a></li>
+      <!-- <li class="sep"><a href="#" title="Help" rel="external">Help</a></li> -->
+    </ul>
+    <!-- <ul class="global-menu">
+      <li class="dropdown">
+      	<a href="#" title="Info" class="dropdown-toggle bttn bttn-m bttn-default help hide-txt" data-toggle="dropdown"><span>Info</span></a>
+
+      </li>
+    </ul> -->
+    <span id="arrow-down"><span></span></span>
+  </nav>
+  <div class="map-zoom bttn-group-vertical bttn-group-m">
+    <button type="button" class="bttn bttn-default add hide-txt" id="map-zin">
+      <span>Zoom in</span>
+    </button>
+    <button type="button" class="bttn bttn-default subtract hide-txt" id="map-zout">
+      <span>Zoom out</span>
+    </button>
+  </div>
+  <button type="button" class="map-world bttn bttn-default earth hide-txt" id="map-home">
+    <span>World view</span>
+  </button>
+  <button type="button" class="map-search bttn bttn-default search hide-txt" id="map-search">
+    <span>Search</span>
+  </button>
+
+  <button type="button" class="report-print bttn bttn-default hide-txt" id="report-print-back">
+    <span>Back</span>
+  </button>
+  <button type="button" class="report-print bttn bttn-default hide-txt" id="report-print-print">
+    <span>Print</span>
+  </button>
+</header>
+<main id="site-body"></main>
+<section id="about"></section>
+<section id="indicators"></section>
+<section id="help"></section>

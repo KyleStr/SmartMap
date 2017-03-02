@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>NEXSO SmartMap</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,700italic' rel='stylesheet' type='text/css' />
+
+        <!-- Required Esri/Dojo Stylesheets -->
+        <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+        <link rel="stylesheet" href="assets/css/expandoPane.css">
+
+        <!-- 3rd Party Stylesheets -->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+        <!-- Smartmap Stylesheet -->
+        <link rel="stylesheet" href="assets/css/main.css">
+
+        <!-- Required Libraries -->
+        <script src="js/components/smartmap-ui/release/lib/deps.min.js"></script>
+        <script src="js/components/smartmap-ui/release/lib/smartmap.js"></script>
+    </head>
+    <body class='claro'>
+        <div id="blockingDiv"></div>
+        <script>
+            var dojoConfig = {
+                parseOnLoad: true,
+                isDebug: true,
+                async: true // otherwise devtools makes all my files VMs. :\
+            };
+        </script>
+
+        <!-- Esri JSAPI -->
+        <script src="http://js.arcgis.com/3.11/"></script>
+
+        <!-- Application Entry Point -->
+        <script src="./js/main.js"></script>
+
+        <div id="site-canvas"><!-- Content --></div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+// SCROLLABLE
+
+.scrollable-inner {
+  overflow: hidden;
+  position: relative;
+  height: inherit;
+  width: inherit;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.scrollable-shadow {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    content: '';
+    background: rgba($base-color, 0.08);
+    display: none;
+  }
+
+  &.shadow-top:before {
+    top: 0;
+    display: block;
+  }
+
+  &.shadow-bottom:after {
+    bottom: 0;
+    display: block;
+  }
+}
+
+.scrollable {
+	.modal & {
+    margin: 0 (-$modal-padding) (-$modal-padding) (-$modal-padding);
+    max-height: 20rem;
+    .scrollable-body {
+      padding: 1rem;
+    }
+	}
+  @media #{$large-up} {
+    .modal-body & {
+      margin: 0 (-($modal-padding*2)) (-($modal-padding*2)) (-($modal-padding*2));
+      .scrollable-body {
+        padding: 2rem;
+      }
+    }
+  }
+}

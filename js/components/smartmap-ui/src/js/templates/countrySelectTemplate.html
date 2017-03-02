@@ -1,0 +1,19 @@
+<h1>Country</h1>
+<p>What country do you want to analyze?</p>
+
+<div id="countrySelectGroup" class="form-control form-control-block">
+  <select id="countrySelect" data-placeholder="Select Country" >
+      <option></option>
+    <% _(countries).each(function(country) { %>
+      <option value="<%= country.CNTRY_ISO %>"> <%= country.CNTRY_NM %> </option>
+    <% }); %>
+  </select>
+</div>
+
+<div id="adminLevelSelectGroup" class="form-control form-control-block">
+  <select id="adminLevelSelect" data-placeholder="Division"  disabled><!-- options --></select>
+</div>
+
+<span class="small">By choosing the country you will be able to analyze indicators</span>
+
+<button type="button" name="selectionFinished" id="selectionFinished" disabled>Next</button>

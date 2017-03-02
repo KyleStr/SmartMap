@@ -1,0 +1,74 @@
+.esriPopupWrapper {
+  width: 20rem;
+
+  .sizer {
+    width: auto;
+  }
+  
+  .actionList {
+    display: none;
+  }
+  
+  .titlePane {
+    .prev, .next, .maximize {
+      display: none;
+    }
+    
+    .close {
+      background: none;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+      font-size: 1rem;
+      line-height: 1;
+      color: rgba($base-color,0.4);
+  
+      &:before {
+        @extend .icon-s-cancel;
+      }
+    }
+
+    position: relative;
+    background: #FFF;
+    padding: 1rem 2rem 1rem 1rem;
+    border-bottom: 1px solid tint($base-color, 90%);
+    
+    .title {
+      @extend .hd-xxs;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+      white-space: pre-wrap;
+    }
+  }
+  
+  .contentPane {
+    padding: 1rem;
+    
+    .results-details {
+      margin: 0;
+      overflow: hidden;
+      
+      dt, dd {
+        margin-bottom: 0.25rem;
+      }
+      
+      dt {
+        float: left;
+        width: 11rem;
+        padding-right: 1rem;
+        @extend .truncated;
+      }
+      dd {
+        padding-left: 11rem;
+      }
+      
+      sup {
+        opacity: 0.6;
+        top: -0.4em;
+      }
+    }
+    
+  }
+}

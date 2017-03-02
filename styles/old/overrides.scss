@@ -1,0 +1,31 @@
+/**
+ * Dijit Overrides
+ */
+
+.claro .dijitContentPane {
+  padding: 0;
+}
+
+.claro .dojoxExpandoTitle,
+.claro .dojoxExpandoClosed .dojoxExpandoTitle {
+  background-image: none;
+  border: none;
+  background-color: #fff !important;
+}
+.dojoxExpandoBottom .dojoxExpandoTitle:hover {
+  cursor: pointer;
+}
+
+.dojoxExpandoClosed .dojoxExpandoTitleNode {
+  display: inline;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.simpleGeocoder .esriGeocoder {
+  border-width: 1px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}

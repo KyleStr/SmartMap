@@ -1,0 +1,19 @@
+<section class="modal">
+  <div class="modal-inner">
+    <a class="close" data-modal-dismiss href="#" title="Close"><span>Close</span></a>
+    <header class="modal-header">
+      <h1 class="modal-title">Modal title</h1>
+    </header>
+    <div class="modal-body">
+    </div>
+    <footer class="modal-footer">
+      <% if(showCancel) { %>
+      <button class="bttn bttn-m" title="Cancel" data-modal-dismiss>Cancel</button>
+      <% } %>
+
+      <% if(showConfirm) { %>
+      <button class="bttn bttn-m" title="Confirm" data-modal-confirm>Confirm</button>
+      <% } %>
+    </footer>
+  </div>
+</section>

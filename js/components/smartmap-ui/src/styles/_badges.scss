@@ -1,0 +1,20 @@
+// BADGES
+
+.badge {
+  display: inline-block;
+  min-width: 0.85rem;
+  padding: 0.225rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: $base-font-family;
+  font-weight: $base-font-bold;
+  line-height: 0.85rem;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: rgba($base-color, 0.4);
+  border-radius: $global-rounded;
+  margin-left: 0.25rem;
+  @extend .antialiased;
+  text-transform: none;
+}
