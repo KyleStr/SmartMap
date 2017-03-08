@@ -1,6 +1,11 @@
 /* global define */
 define(function() {
   return {
+    // url to your proxy page, must be on same machine hosting your app.
+    proxy: {
+      url: 'proxy/proxy.php',
+      alwaysUseProxy: false
+    },
 
     geometryService: {
       url: 'http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer'
