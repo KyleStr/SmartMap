@@ -2,7 +2,7 @@
 
 ###Descripción
 ---
-SmartMap es una herramienta para visualizar, analizar y superponer datos geográficos. Los usuarios eligen entre docenas de indicadores sociales, económicos y ambientales, extraídos de fuentes públicas de información, para crear mapas personalizados y detallados.
+SmartMap es una herramienta para visualizar, analizar y superponer datos geográficos. Los usuarios pueden elegir entre docenas de indicadores sociales, económicos y ambientales, extraídos de fuentes públicas de información, para crear mapas personalizados y detallados.
 
 La información disponible en SmartMap se basa en los datos oficiales publicados por los organismos nacionales e internacionales a los que se hace referencia. La política adoptada para definir los límites administrativos no refleja ninguna posición oficial del Grupo del BID y del FOMIN.
 Los resultados del análisis deben considerarse meramente indicativos y de cualquier forma no se deben utilizar referencias en situaciones críticas o de emergencias. El equipo de NEXSO SmartMap agradece cualquier comentario, observación o sugerencia con respecto a la información contenida en esta aplicación y sus funcionalidades.
