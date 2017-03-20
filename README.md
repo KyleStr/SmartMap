@@ -1,10 +1,11 @@
-## NEXSO SmartMap
+## SMARTMAP
 
-###Descripción
+### Descripción
 ---
 SmartMap es una herramienta para visualizar, analizar y superponer datos geográficos. Los usuarios pueden elegir entre docenas de indicadores sociales, económicos y ambientales, extraídos de fuentes públicas de información, para crear mapas personalizados y detallados.
 
 La información disponible en SmartMap se basa en los datos oficiales publicados por los organismos nacionales e internacionales a los que se hace referencia. La política adoptada para definir los límites administrativos no refleja ninguna posición oficial del Grupo del BID y del FOMIN.
+
 Los resultados del análisis deben considerarse meramente indicativos y de cualquier forma no se deben utilizar referencias en situaciones críticas o de emergencias. El equipo de NEXSO SmartMap agradece cualquier comentario, observación o sugerencia con respecto a la información contenida en esta aplicación y sus funcionalidades.
 
 ### Arquitectura de aplicaciones
@@ -32,7 +33,7 @@ Recuerda:
 
 ### Vamos más allá, hacer que sea de código abierto social
 ---
-Razón por la que estamos abriendo el código fuente ....
+El software es una herramienta fundamental para el diseño e implementación de proyectos y programas. Esta herramienta se abre bajo el programa de [Código para el Desarrollo](code.iadb.org) del BID, que busca consolidar su compromiso con el uso y promoción del conocimiento abierto, así como acelerar el diálogo sobre cómo la tecnología puede impulsar el desarrollo de América Latina y el Caribe.
 
 ### Requisitos de desarrollo
 ---
@@ -43,7 +44,7 @@ Razón por la que estamos abriendo el código fuente ....
 - Compass ($ gem install compass)
 - Browser-Sync
 
-###Comenzar ahora 
+### Cómo instalar 
 ---
 
 Navega hasta `cd js/components/smartmap-ui`:
@@ -68,7 +69,7 @@ Recuerda:
 
 > Cada vez que necesite reconstruir completamente el proyecto ejecuta `grunt build` en el directorio smartmap-ui y una vez completado ejecuta `grunt build` en la raíz de la aplicación.
 
-###Desarrollo
+### Desarrollo
 ---
 
 Durante la fase de desarrollo, se recomeinda ejecutar el observaodr de grunt para vigilar el directorio smartmap-ui y el raíz.
@@ -76,14 +77,7 @@ Durante la fase de desarrollo, se recomeinda ejecutar el observaodr de grunt par
 - `grunt watch --force` en el directorio smartmap-ui (para evitar errores del tipo linting durante el desarrollo)
 - en lugar de usar --force, también puede agregar `debug ': true` al archivo `smartmap-ui / .jshintrc`
 
-Ejecutar aplicación
-
-En el directorio raíz
-
-### Análisis de calidad
----
-
-El BID hizo una evaluación de calidad externa de este código con el fin de informar a la comunidad los problemas a resolver. Este código está clasificado como XXXX. Esto significa que requiere un trabajo adicional para que sea estable en un ambiente de producción.
+La aplicación se debe ejecutar en el directorio raíz.
 
 ### Cómo contribuir
 ---
@@ -103,19 +97,23 @@ Identificamos varios puntos para mejorar Smartmap.
 6. Mejorar la documentación en el código.
 7. Mejorar el rendimiento del código.
 
+### Más información
+---
+## Análisis de calidad
+De acuerdo al sistema de evaluación de software definido en la guía de ciclo de vida de desarrollo de software, el análisis de esta herramienta ha generado la siguiente evaluación:
 
+* Blocker issues: 74 (> 0) **Low** 
+* Duplicated lines: 1.3% (< 15%) **Hard**
+* Critical issues: 41 (> 20) **Standard**
+* Technical debt: 72d (> 60d) **Low**
+* Test coverage: 0% (< 10%) **Low**
 
-###Licencia
+Más información en [este link.](https://el-bid.github.io/software-life-cycle-guide/delivery/evaluation-matrix/)
+
+### Licencia
 ---
 
 Licencia MIT
-
-Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el "Software"), para utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias del Software, y a permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
-
-El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
-EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
-
->Está no es una traducción oficial, favor referirse a la licencia original en ingles, https://opensource.org/licenses/MIT
 
 ### Autores
 BID
