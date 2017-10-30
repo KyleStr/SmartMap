@@ -1,3 +1,5 @@
+*Esta herramienta digital está publicada en la página web de la iniciativa [Código para el Desarrollo](http://code.iadb.org/es/repositorio/22/smartmap)*
+
 ## SMARTMAP
 
 ### Descripción
