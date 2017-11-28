@@ -1,5 +1,5 @@
 language: node_js
-sudo: required
+#sudo: required
 
 # safelist
 branches:
@@ -17,7 +17,7 @@ before_install:
   - gem install --pre compass
   - gem install --pre sass-css-importer
 #  - compass version
-  - sass --compass
+#  - sass --compass
   - npm install -g grunt-cli
   - npm install -g grunt-init
   - npm install -g bower
