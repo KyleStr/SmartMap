@@ -146,6 +146,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass:dev', 'jshint', 'watch']);
 
   // Other tasks
-  grunt.registerTask('init', ['shell:bowerInstall', 'copy:bower', 'sass:dev', 'jshint', 'watch']);
+  //grunt.registerTask('init', ['shell:bowerInstall', 'copy:bower', 'sass:dev', 'jshint', 'watch']);
+  grunt.registerTask('init', ['shell:bowerInstall', 'copy:bower', 'sass:dev', 'jshint']);
   grunt.registerTask('build', ['clean', 'sass:dist', 'copy:build']);
 };
