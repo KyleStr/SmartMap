@@ -41,6 +41,7 @@ install:
   - grunt init --force
 
   - cd
+  - pwd
   - npm install
   - grunt init --force
 
