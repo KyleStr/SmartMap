@@ -1,0 +1,28 @@
+language: node_js
+
+# safelist
+branches:
+  only:
+  - gmv
+
+cache:
+  directories:
+    - "node_modules"
+
+install:
+  - cd $BUILD_PATH
+  - npm install
+  - grunt init --force
+
+script:
+  - grunt build
+
+#after_script:
+  # brand
+  # package
+  # qa -> sonar cloud
+
+matrix:
+  include:
+  - env: BUILD_PATH=./js/components/smartmap-ui
+  - env: BUILD_PATH=./
