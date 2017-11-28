@@ -27,7 +27,8 @@ before_install:
   - npm install -g bower-sync
 
 install:
-  - cd $BUILD_PATH
+  #- cd $BUILD_PATH
+  - cd ./js/components/smartmap-ui
 #  - echo "WORKSPACE:"
 #  - pwd
 #  - ls
@@ -37,17 +38,24 @@ install:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
   - grunt init --force
 
+  - cd
+  - npm install
+  - grunt init --force
+
 script:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt  build
+  - cd ./js/components/smartmap-ui
+  - grunt build
+  - cd
   - grunt build
 
-after_script:
-  - sudo updatedb; locate perfect-scrollbar;
+#after_script:
+#  - sudo updatedb; locate perfect-scrollbar;
   # brand
   # package
   # qa -> sonar cloud
 
-matrix:
-  include:
-  - env: BUILD_PATH=./js/components/smartmap-ui
-  - env: BUILD_PATH=./
+#matrix:
+#  include:
+#  - env: BUILD_PATH=./js/components/smartmap-ui
+#  - env: BUILD_PATH=./
