@@ -20,8 +20,8 @@ before_install:
 #  - sass --compass
   - npm install -g grunt@~0.4.0
   - npm install -g grunt-cli
-  - sudo updatedb; locate bin/grunt
-  - grunt -V
+  - which grunt
+  - grunt -V        
 #  - npm install -g grunt-init
   - npm install -g bower
   - npm install -g bower-sync
@@ -33,10 +33,12 @@ install:
 #  - ls
   - npm install
 #  - sudo updatedb; sudo locate grunt
-  - /home/travis/.nvm/v0.10.48/bin/grunt --version
-  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
+#  - /home/travis/.nvm/v0.10.48/bin/grunt --version
+#  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
+  - grunt init --force
 
 script:
+#  - /home/travis/.nvm/v0.10.48/bin/grunt  build
   - grunt build
 
 #after_script:
