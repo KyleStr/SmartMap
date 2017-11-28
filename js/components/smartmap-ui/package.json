@@ -2,7 +2,7 @@
   "name": "smartmap-ui",
   "version": "0.1.0",
   "dependencies": {
-    "grunt": "latest",
+    "grunt": ">=0.4.5 <1.0.0",
     "grunt-contrib-copy": "latest",
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-watch": "latest",
