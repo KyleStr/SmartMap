@@ -1,4 +1,5 @@
 language: node_js
+sudo: required
 
 # safelist
 branches:
@@ -15,7 +16,7 @@ install:
   - pwd
   - ls
   - npm install
-  - updatedb; locate grunt
+  - sudo updatedb; sudo locate grunt
   - grunt init --force
 
 script:
