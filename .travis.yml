@@ -16,8 +16,8 @@ install:
   - pwd
   - ls
   - npm install
-  - sudo updatedb; sudo locate grunt
-  - /home/travis/.npm/grunt init --force
+#  - sudo updatedb; sudo locate grunt
+  - /home/travis/.nvm/versions/node/v7.4.0/bin/grunt init --force
 
 script:
   - grunt build
