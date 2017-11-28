@@ -15,6 +15,7 @@ before_install:
 #  - sudo apt-get install -qq -y ruby
   - gem install --pre sass-css-importer
   - gem install compass
+  - compass version
   - npm install -g grunt-cli
   - npm install -g bower
   - npm install -g bower-sync
