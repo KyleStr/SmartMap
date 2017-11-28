@@ -18,8 +18,8 @@ before_install:
   - gem install --pre sass-css-importer
 #  - compass version
 #  - sass --compass
-  - npm install -g grunt-cli
-  - npm install -g grunt-init
+  - npm install -g grunt-cli@0.4.0
+#  - npm install -g grunt-init
   - npm install -g bower
   - npm install -g bower-sync
 
@@ -30,6 +30,7 @@ install:
 #  - ls
   - npm install
 #  - sudo updatedb; sudo locate grunt
+  - /home/travis/.nvm/v0.10.48/bin/grunt --version
   - /home/travis/.nvm/v0.10.48/bin/grunt init --force
 
 script:
