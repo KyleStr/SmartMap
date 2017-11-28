@@ -11,6 +11,9 @@ cache:
 
 install:
   - cd $BUILD_PATH
+  - echo "WORKSPACE:"
+  - pwd
+  - ls
   - npm install
   - grunt init --force
 
