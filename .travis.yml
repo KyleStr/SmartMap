@@ -28,7 +28,9 @@ before_install:
 
 install:
   #- cd $BUILD_PATH
+  - pwd
   - cd ./js/components/smartmap-ui
+  - pwd
 #  - echo "WORKSPACE:"
 #  - pwd
 #  - ls
