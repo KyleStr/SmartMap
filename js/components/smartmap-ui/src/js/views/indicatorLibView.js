@@ -82,7 +82,7 @@ define([
                   $scrollable.animate({scrollTop: position});
 
                   $('#' + indicator).closest('article').css({'background-color':'#CDCCD1'});
-                  $('#' + indicator).closest('article').animate({'padding':'2em'},  "slow");
+                  $('#' + indicator).closest('article').animate({'padding':'2em'},  'slow');
                 }, 200);
 
               }
