@@ -21,12 +21,12 @@ before_install:
 
 install:
   - cd $BUILD_PATH
-  - echo "WORKSPACE:"
-  - pwd
-  - ls
+#  - echo "WORKSPACE:"
+#  - pwd
+#  - ls
   - npm install
-  - sudo updatedb; sudo locate grunt
-  - /home/travis/.nvm/versions/node/v7.4.0/bin/grunt init --force
+#  - sudo updatedb; sudo locate grunt
+  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
 
 script:
   - grunt build
