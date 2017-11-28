@@ -19,8 +19,9 @@ before_install:
 #  - compass version
 #  - sass --compass
   - npm install -g grunt@~0.4.0
+  - npm install -g grunt-cli
   - sudo updatedb; locate bin/grunt
-#  - npm install -g grunt-cli
+  - grunt -V
 #  - npm install -g grunt-init
   - npm install -g bower
   - npm install -g bower-sync
