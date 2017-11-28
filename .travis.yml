@@ -41,7 +41,8 @@ script:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt  build
   - grunt build
 
-#after_script:
+after_script:
+  - sudo updatedb; locate perfect-scrollbar;
   # brand
   # package
   # qa -> sonar cloud
