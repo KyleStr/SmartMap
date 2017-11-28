@@ -17,7 +17,7 @@ install:
   - ls
   - npm install
   - sudo updatedb; sudo locate grunt
-  - grunt init --force
+  - /home/travis/.npm/grunt init --force
 
 script:
   - grunt build
