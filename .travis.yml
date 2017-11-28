@@ -1,5 +1,5 @@
 language: node_js
-sudo: required
+#sudo: required
 
 # safelist
 branches:
@@ -28,9 +28,8 @@ before_install:
 
 install:
   #- cd $BUILD_PATH
-  - pwd
+  - BUILD_HOME=`pwd`
   - cd ./js/components/smartmap-ui
-  - pwd
 #  - echo "WORKSPACE:"
 #  - pwd
 #  - ls
@@ -39,17 +38,14 @@ install:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt --version
 #  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
   - grunt init --force
+  - grunt build
 
-  - cd
-  - pwd
+  - cd $BUILD_HOME
   - npm install
   - grunt init --force
 
 script:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt  build
-  - cd ./js/components/smartmap-ui
-  - grunt build
-  - cd
   - grunt build
 
 #after_script:
