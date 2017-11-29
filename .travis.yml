@@ -8,6 +8,7 @@ branches:
 
 cache:
   directories:
+    - '$HOME/.nvm/v0.10.48/lib/node_modules'
     - '$HOME/build/EL-BID/SmartMap/js/components/smartmap-ui/node_modules'
     - '$HOME/build/EL-BID/SmartMap/node_modules'
     - '$HOME/.sonarscanner/cache'
@@ -30,8 +31,8 @@ before_install:
 #  - sass --compass
 #  - npm install -g grunt@~0.4.0
   - npm install -g grunt-cli
-  - which grunt
-  - grunt -V        
+#  - which grunt
+#  - grunt -V        
 #  - npm install -g grunt-init
   - npm install -g bower
   - npm install -g bower-sync
@@ -52,14 +53,12 @@ install:
   - grunt travisinit --force
 
 script:
-#  - /home/travis/.nvm/v0.10.48/bin/grunt  build
   - grunt build
 
 after_script:
   # brand
   # package
   # qa
-  - ls -al $HOME/.sonar*/*
   - sonar-scanner
 
 
