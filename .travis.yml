@@ -1,14 +1,16 @@
 language: node_js
-sudo: required
+#sudo: required
 
 # safelist
 branches:
   only:
   - gmv
 
-#cache:
-#  directories:
-#    - "node_modules"
+cache:
+  directories:
+    - '$HOME/build/EL-BID/SmartMap/js/components/smartmap-ui/node_modules'
+    - '$HOME/build/EL-BID/SmartMap/node_modules'
+    - '$HOME/.sonarscanner/cache'
 
 addons:
   sonarcloud:
@@ -42,9 +44,6 @@ install:
 #  - pwd
 #  - ls
   - npm install
-#  - sudo updatedb; sudo locate grunt
-#  - /home/travis/.nvm/v0.10.48/bin/grunt --version
-#  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
   - grunt travisinit --force
   - grunt build
 
@@ -57,7 +56,7 @@ script:
   - grunt build
 
 after_script:
-  - sudo updatedb; locate node_modules; locate .sonar
+  - ls -al '$HOME/.sonarscanner/cache'
   - sonar-scanner
   # brand
   # package
