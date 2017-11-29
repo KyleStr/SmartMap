@@ -1,5 +1,5 @@
 language: node_js
-#sudo: required
+sudo: required
 
 # safelist
 branches:
@@ -57,9 +57,8 @@ script:
   - grunt build
 
 after_script:
+  - sudo updatedb; locate node_modules; locate .sonar
   - sonar-scanner
-
-#  - sudo updatedb; locate perfect-scrollbar;
   # brand
   # package
   # qa -> sonar cloud
