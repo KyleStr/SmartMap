@@ -10,6 +10,12 @@ branches:
 #  directories:
 #    - "node_modules"
 
+addons:
+  sonarcloud:
+    organization: "el-bid-github" # the key of the org you chose at step #3
+#    token:
+#     secure: ********* # encrypted value of your token
+
 before_install:
 #  - sudo apt-get update -qq
 #  - sudo apt-get install -qq -y ruby
@@ -48,7 +54,9 @@ script:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt  build
   - grunt build
 
-#after_script:
+after_script:
+  - sonar-scanner
+  
 #  - sudo updatedb; locate perfect-scrollbar;
   # brand
   # package
