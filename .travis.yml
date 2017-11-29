@@ -37,12 +37,12 @@ install:
 #  - sudo updatedb; sudo locate grunt
 #  - /home/travis/.nvm/v0.10.48/bin/grunt --version
 #  - /home/travis/.nvm/v0.10.48/bin/grunt init --force
-  - grunt init --force
+  - grunt travisinit --force
   - grunt build
 
   - cd $BUILD_HOME
   - npm install
-  - grunt init --force
+  - grunt travisinit --force
 
 script:
 #  - /home/travis/.nvm/v0.10.48/bin/grunt  build
