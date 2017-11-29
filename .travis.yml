@@ -56,11 +56,12 @@ script:
   - grunt build
 
 after_script:
-  - ls -al '$HOME/.sonarscanner/cache'
-  - sonar-scanner
   # brand
   # package
-  # qa -> sonar cloud
+  # qa
+  - ls -al $HOME/.sonar*/*
+  - sonar-scanner
+
 
 #matrix:
 #  include:
