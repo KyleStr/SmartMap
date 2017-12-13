@@ -15,7 +15,7 @@ cache:
 
 addons:
   sonarcloud:
-    organization: "el-bid-github" # the key of the org you chose at step #3
+    organization: "el-bid" # the key of the org you chose at step #3
     token:
         secure: "FlQTr+HsrDRtTU8WAwtQ0j/Q61Uooy7Bp7fl2wnh8T50C0xksFOljxrteUfNPRUehd9qwkHI3B0MU5JYTmFrJ14IFTC6d1MRuqF6lGck9wr6By/F0eUMPBiBzYLQqMqLSWpKVkOheF5jgoZhIv3tmj+OmHVRcLFyzALM/5cl8SWABXLFLbf/23bJUdDyzpJIn1Z98K53XP6NylEgDhPPjm40cR37cYsX/NzDkHbHZttqJcsjHuvJzaroT3ZKHktP3ccwBZEhAWoaAMx4au6Yd2N53zumY7PPAzpMrQEnqq81CbYIg4CkeQ7jcA2X2uqTwvYqvOA5KHvpmC1EDvlJMl5MlKKo8kFiPywMNnwTz5gfvJkUAj9nWiv1zVdsumFSAv+JggimiSmD0l6s6wB1Cv39zJOm+lM4lCtdJiWMgpKNxUL2DOxARRYTPcVD/4+bhZne69ZsZeQ6srFuVZ+/75mpeC38jZ9PRuqkJTAMJV4Xun9+8acntVaW2D5ecE/HvYQn0H+qTXOPCgpeWdLWCuGQtMmM9y6i0asUKAsMCpo8FhpoA1kfs7ICZf6TsQXcj7Tclu2FDOTQ4NxTO/t1he3rCUBjKkvkzdg6w7qN+c70t5NXUGbBsjNU5fpE9aAZ+VIMzdXZsyeJcgUG1j74jH+Rg5Cx4Xbfr+K3OAO4mNE="
     branches:
